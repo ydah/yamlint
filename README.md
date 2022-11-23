@@ -1,6 +1,6 @@
 # Yamlint
 [![test](https://github.com/ydah/yamlint/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ydah/yamlint/actions/workflows/test.yml)
-[![Gem Version](https://badge.fury.io/rb/yamlint.svg)](https://badge.fury.io/rb/yamlint) 
+[![Gem Version](https://badge.fury.io/rb/yamlint.svg)](https://badge.fury.io/rb/yamlint) [![Maintainability](https://api.codeclimate.com/v1/badges/6ed4b547a64f6abe0b32/maintainability)](https://codeclimate.com/github/ydah/yamlint/maintainability)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yamlint`. To experiment with that code, run `bin/console` for an interactive prompt.
 
