@@ -9,7 +9,7 @@ module Yamlint
     default_command :lint
     desc 'lint', 'Static analysis of YAML files.'
     def lint
-      puts 'command'
+      Commands::Lint.call
     end
   end
 end
