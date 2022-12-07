@@ -7,8 +7,10 @@ module Yamlint
     def run(name, source)
       puts name
       source.each_line do |line|
-        puts line
-        AST::Node.new('Comment').inspect if line.start_with?('#')
+        node = AST::Node.new('Not impl', line)
+        node = AST::Node.new('Comment', line) if line.start_with?('#')
+
+        puts node.inspect
       end
     end
   end
