@@ -9,8 +9,7 @@ module Yamlint
     def run
       paths.each do |file|
         File.open(file, 'r') do |fp|
-          puts file
-          puts fp.read
+          AST::ProcessedSource.new(fp.read, file)
         end
       end
     end
