@@ -3,9 +3,14 @@
 require_relative 'yamlint/version'
 
 module Yamlint
-  autoload :AST, 'yamlint/ast'
-  autoload :Cli, 'yamlint/cli'
-  autoload :Commands, 'yamlint/commands'
+  autoload :Models, 'yamlint/models'
   autoload :Parser, 'yamlint/parser'
+  autoload :Rules, 'yamlint/rules'
+  autoload :Presets, 'yamlint/presets'
+  autoload :Config, 'yamlint/config'
+  autoload :Linter, 'yamlint/linter'
+  autoload :Formatter, 'yamlint/formatter'
   autoload :Runner, 'yamlint/runner'
+  autoload :Output, 'yamlint/output'
+  autoload :Cli, 'yamlint/cli'
 end

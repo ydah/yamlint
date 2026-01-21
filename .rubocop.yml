@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
   - rubocop-rake
   - rubocop-rspec
@@ -21,3 +21,15 @@ RSpec/NamedSubject:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 2
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/SpecFilePathFormat:
+  Exclude:
+    - '**/spec/routing/**/*'
+    - 'spec/yamlint/parser/comment_extractor_spec.rb'
+    - 'spec/yamlint/rules/base_spec.rb'

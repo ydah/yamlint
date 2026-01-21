@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'fileutils'
+require 'tmpdir'
 require 'yamlint'
+require_relative 'support/helpers'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

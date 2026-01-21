@@ -2,16 +2,9 @@
 
 module Yamlint
   module Parser
-    module_function
-
-    def run(name, source)
-      puts name
-      source.each_line do |line|
-        node = AST::Node.new('Not impl', line)
-        node = AST::Node.new('Comment', line) if line.start_with?('#')
-
-        puts node.inspect
-      end
-    end
+    autoload :LineParser, 'yamlint/parser/line_parser'
+    autoload :TokenParser, 'yamlint/parser/token_parser'
+    autoload :CommentExtractor, 'yamlint/parser/comment_extractor'
+    autoload :Comment, 'yamlint/parser/comment_extractor'
   end
 end

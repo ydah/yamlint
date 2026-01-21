@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require 'yaml'
-
-ARGV.each do |arg|
-  p File.open(arg, 'r') { |f| YAML.load(f) }
-end
