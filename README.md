@@ -1,39 +1,177 @@
-# Yamlint
-[![test](https://github.com/ydah/yamlint/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ydah/yamlint/actions/workflows/test.yml)
-[![Gem Version](https://badge.fury.io/rb/yamlint.svg)](https://badge.fury.io/rb/yamlint) [![Maintainability](https://api.codeclimate.com/v1/badges/6ed4b547a64f6abe0b32/maintainability)](https://codeclimate.com/github/ydah/yamlint/maintainability)
+# yamlint
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yamlint`. To experiment with that code, run `bin/console` for an interactive prompt.
+<p align="center">
+  <a href="https://github.com/ydah/yamlint/actions/workflows/test.yml"><img src="https://github.com/ydah/yamlint/actions/workflows/test.yml/badge.svg?branch=main" alt="test"></a>
+  <a href="https://badge.fury.io/rb/yamlint"><img src="https://badge.fury.io/rb/yamlint.svg" alt="Gem Version"></a>
+  <a href="https://codeclimate.com/github/ydah/yamlint/maintainability"><img src="https://api.codeclimate.com/v1/badges/6ed4b547a64f6abe0b32/maintainability" alt="Maintainability"></a>
+</p>
 
-TODO: Delete this and the text above, and describe your gem
+<p align="center">
+  A Ruby CLI for linting and formatting YAML files
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#quickstart">Quickstart</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#configuration">Configuration</a> •
+  <a href="#rules">Rules</a>
+</p>
+
+## Features
+
+- Rule-based linting and auto-formatting
+- Configuration via `.yamllint(.yml/.yaml)` with preset `extends`
+- CI-friendly output formats (standard/parsable/colored/github)
+- YAML file patterns and ignore support
+
+## Quickstart
+
+```bash
+gem install yamlint
+
+# lint
+yamlint .
+
+# format (dry-run)
+yamlint format --dry-run .
+```
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+With Bundler:
 
-    $ bundle add yamlint
+```bash
+bundle add yamlint
+```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+Without Bundler:
 
-    $ gem install yamlint
+```bash
+gem install yamlint
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Basic:
+
+```bash
+yamlint .
+yamlint path/to/file.yml
+```
+
+Formatting:
+
+```bash
+yamlint format .
+yamlint format --dry-run .
+```
+
+CI output:
+
+```bash
+yamlint -f github .
+```
+
+Help:
+
+```bash
+yamlint --help
+```
+
+## Configuration
+
+Default config file names:
+
+- `.yamllint`
+- `.yamllint.yml`
+- `.yamllint.yaml`
+
+Configuration options:
+
+| Option | Type | Default | Behavior |
+| --- | --- | --- | --- |
+| `extends` | string | none | Inherit a preset (`default` or `relaxed`). Values from the current file override the preset. |
+| `yaml-files` | list of glob strings | `["*.yaml", "*.yml"]` | Glob patterns used when discovering YAML files in directories. |
+| `ignore` | list of strings | `[]` | List of paths to skip. Parsed by the config loader but not currently applied to file discovery. |
+| `rules` | map | `{}` | Per-rule configuration. Set a rule to `disable` or `false` to turn it off, or provide a map of options. |
+
+Notes:
+
+- Rule option keys accept either `snake_case` or `kebab-case` and are normalized internally.
+- Rule option defaults come from the rule implementation and are merged with your overrides.
+
+Example:
+
+```yaml
+extends: default
+
+yaml-files:
+  - "*.yml"
+  - "*.yaml"
+
+ignore:
+  - vendor
+  - node_modules
+
+rules:
+  line-length:
+    max: 120
+  document-start: disable
+  truthy:
+    allowed-values: ["true", "false"]
+```
+
+## Presets
+
+Available presets:
+
+- `default`
+- `relaxed`
+
+```yaml
+extends: relaxed
+```
+
+## Rules
+
+Key rules:
+
+- anchors, braces, brackets, colons, commas, comments, comments-indentation
+- document-start, document-end, empty-lines, empty-values, float-values
+- hyphens, indentation, key-duplicates, key-ordering, line-length
+- new-lines, new-line-at-end-of-file, octal-values, quoted-strings
+- trailing-spaces, truthy
+
+## Output formats
+
+Use `-f`/`--format` to select an output format:
+
+- `standard`
+- `parsable`
+- `colored`
+- `github`
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```bash
+bin/setup
+rake spec
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Install locally:
 
-## Contributing
+```bash
+bundle exec rake install
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yamlint. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/yamlint/blob/main/CODE_OF_CONDUCT.md).
+Release:
+
+```bash
+bundle exec rake release
+```
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Yamlint project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/yamlint/blob/main/CODE_OF_CONDUCT.md).
+MIT License. See `LICENSE.txt` for details.
