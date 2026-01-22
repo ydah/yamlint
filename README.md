@@ -1,9 +1,7 @@
-# yamlint
+<h1 align="center">yamlint</h1>
 
 <p align="center">
-  <a href="https://github.com/ydah/yamlint/actions/workflows/test.yml"><img src="https://github.com/ydah/yamlint/actions/workflows/test.yml/badge.svg?branch=main" alt="test"></a>
-  <a href="https://badge.fury.io/rb/yamlint"><img src="https://badge.fury.io/rb/yamlint.svg" alt="Gem Version"></a>
-  <a href="https://codeclimate.com/github/ydah/yamlint/maintainability"><img src="https://api.codeclimate.com/v1/badges/6ed4b547a64f6abe0b32/maintainability" alt="Maintainability"></a>
+  <img src="https://img.shields.io/badge/ruby-%3E%3D%203.1-ruby.svg" alt="Ruby Version"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"><a href="https://github.com/ydah/yamlint/actions/workflows/test.yml"><img src="https://github.com/ydah/yamlint/actions/workflows/test.yml/badge.svg?branch=main" alt="test"></a><a href="https://badge.fury.io/rb/yamlint"><img src="https://badge.fury.io/rb/yamlint.svg" alt="Gem Version"></a>
 </p>
 
 <p align="center">
