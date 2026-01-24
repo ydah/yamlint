@@ -6,7 +6,7 @@
 <title>
   Module: Yamlint
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.38
   
 </title>
 
@@ -79,7 +79,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/yamlint.rb<span class="defines">,<br />
-  lib/yamlint/cli.rb,<br /> lib/yamlint/version.rb</span>
+  lib/yamlint/cli.rb,<br /> lib/yamlint/rules.rb,<br /> lib/yamlint/config.rb,<br /> lib/yamlint/linter.rb,<br /> lib/yamlint/models.rb,<br /> lib/yamlint/output.rb,<br /> lib/yamlint/parser.rb,<br /> lib/yamlint/runner.rb,<br /> lib/yamlint/presets.rb,<br /> lib/yamlint/version.rb,<br /> lib/yamlint/formatter.rb,<br /> lib/yamlint/rules/base.rb,<br /> lib/yamlint/output/base.rb,<br /> lib/yamlint/models/token.rb,<br /> lib/yamlint/rules/braces.rb,<br /> lib/yamlint/rules/colons.rb,<br /> lib/yamlint/rules/commas.rb,<br /> lib/yamlint/rules/truthy.rb,<br /> lib/yamlint/output/github.rb,<br /> lib/yamlint/rules/anchors.rb,<br /> lib/yamlint/rules/hyphens.rb,<br /> lib/yamlint/models/problem.rb,<br /> lib/yamlint/output/colored.rb,<br /> lib/yamlint/rules/brackets.rb,<br /> lib/yamlint/rules/comments.rb,<br /> lib/yamlint/rules/registry.rb,<br /> lib/yamlint/output/parsable.rb,<br /> lib/yamlint/output/standard.rb,<br /> lib/yamlint/presets/default.rb,<br /> lib/yamlint/presets/relaxed.rb,<br /> lib/yamlint/rules/new_lines.rb,<br /> lib/yamlint/rules/empty_lines.rb,<br /> lib/yamlint/rules/indentation.rb,<br /> lib/yamlint/rules/line_length.rb,<br /> lib/yamlint/parser/line_parser.rb,<br /> lib/yamlint/rules/document_end.rb,<br /> lib/yamlint/rules/empty_values.rb,<br /> lib/yamlint/rules/float_values.rb,<br /> lib/yamlint/rules/key_ordering.rb,<br /> lib/yamlint/rules/octal_values.rb,<br /> lib/yamlint/models/lint_context.rb,<br /> lib/yamlint/parser/token_parser.rb,<br /> lib/yamlint/rules/document_start.rb,<br /> lib/yamlint/rules/key_duplicates.rb,<br /> lib/yamlint/rules/quoted_strings.rb,<br /> lib/yamlint/rules/trailing_spaces.rb,<br /> lib/yamlint/parser/comment_extractor.rb,<br /> lib/yamlint/rules/comments_indentation.rb,<br /> lib/yamlint/rules/new_line_at_end_of_file.rb</span>
 </dd>
   </dl>
   
@@ -89,9 +89,11 @@
 <p class="children">
   
     
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Yamlint/Models.html" title="Yamlint::Models (module)">Models</a></span>, <span class='object_link'><a href="Yamlint/Output.html" title="Yamlint::Output (module)">Output</a></span>, <span class='object_link'><a href="Yamlint/Parser.html" title="Yamlint::Parser (module)">Parser</a></span>, <span class='object_link'><a href="Yamlint/Presets.html" title="Yamlint::Presets (module)">Presets</a></span>, <span class='object_link'><a href="Yamlint/Rules.html" title="Yamlint::Rules (module)">Rules</a></span>
+    
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Yamlint/Cli.html" title="Yamlint::Cli (class)">Cli</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Yamlint/Cli.html" title="Yamlint::Cli (class)">Cli</a></span>, <span class='object_link'><a href="Yamlint/Config.html" title="Yamlint::Config (class)">Config</a></span>, <span class='object_link'><a href="Yamlint/Formatter.html" title="Yamlint::Formatter (class)">Formatter</a></span>, <span class='object_link'><a href="Yamlint/Linter.html" title="Yamlint::Linter (class)">Linter</a></span>, <span class='object_link'><a href="Yamlint/Runner.html" title="Yamlint::Runner (class)">Runner</a></span>
     
   
 </p>
@@ -123,9 +125,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 23 14:49:12 2022 by
+  Generated on Sun Jan 25 08:00:08 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.1.2).
+  0.9.38 (ruby-4.0.0).
 </div>
 
     </div>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Yamlint::Rules::Anchors::AnchorHandler
+  
+    &mdash; Documentation by YARD 0.9.38
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Yamlint::Rules::Anchors::AnchorHandler";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Yamlint.html" title="Yamlint (module)">Yamlint</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Rules.html" title="Yamlint::Rules (module)">Rules</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Anchors.html" title="Yamlint::Rules::Anchors (class)">Anchors</a></span></span>
+     &raquo; 
+    <span class="title">AnchorHandler</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Yamlint::Rules::Anchors::AnchorHandler
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Psych::Handler</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Psych::Handler</li>
+          
+            <li class="next">Yamlint::Rules::Anchors::AnchorHandler</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/yamlint/rules/anchors.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parser-instance_method" title="#parser (instance method)">#<strong>parser</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute parser.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alias-instance_method" title="#alias (instance method)">#<strong>alias</strong>(anchor)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#duplicated_anchors-instance_method" title="#duplicated_anchors (instance method)">#<strong>duplicated_anchors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; AnchorHandler </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of AnchorHandler.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scalar-instance_method" title="#scalar (instance method)">#<strong>scalar</strong>(_value, anchor, _tag, _plain, _quoted, _style)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_mapping-instance_method" title="#start_mapping (instance method)">#<strong>start_mapping</strong>(anchor, _tag, _implicit, _style)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_sequence-instance_method" title="#start_sequence (instance method)">#<strong>start_sequence</strong>(anchor, _tag, _implicit, _style)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#undeclared_aliases-instance_method" title="#undeclared_aliases (instance method)">#<strong>undeclared_aliases</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unused_anchors-instance_method" title="#unused_anchors (instance method)">#<strong>unused_anchors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Yamlint::Rules::Anchors::AnchorHandler (class)">AnchorHandler</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of AnchorHandler.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@anchors</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@aliases</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="parser=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="parser-instance_method">
+  
+    #<strong>parser</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute parser.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parser'>parser</span>
+  <span class='ivar'>@parser</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="alias-instance_method">
+  
+    #<strong>alias</strong>(anchor)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='kw'>alias</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_mark'>mark</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='op'>&amp;.</span><span class='id identifier rubyid_mark'>mark</span>
+  <span class='ivar'>@aliases</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='id identifier rubyid_anchor'>anchor</span><span class='comma'>,</span>
+    <span class='label'>line:</span> <span class='id identifier rubyid_mark'>mark</span> <span class='op'>?</span> <span class='id identifier rubyid_mark'>mark</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>+</span> <span class='int'>1</span> <span class='op'>:</span> <span class='int'>1</span><span class='comma'>,</span>
+    <span class='label'>column:</span> <span class='id identifier rubyid_mark'>mark</span> <span class='op'>?</span> <span class='id identifier rubyid_mark'>mark</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span> <span class='op'>+</span> <span class='int'>1</span> <span class='op'>:</span> <span class='int'>1</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="duplicated_anchors-instance_method">
+  
+    #<strong>duplicated_anchors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_duplicated_anchors'>duplicated_anchors</span>
+  <span class='ivar'>@anchors</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scalar-instance_method">
+  
+    #<strong>scalar</strong>(_value, anchor, _tag, _plain, _quoted, _style)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scalar'>scalar</span><span class='lparen'>(</span><span class='id identifier rubyid__value'>_value</span><span class='comma'>,</span> <span class='id identifier rubyid_anchor'>anchor</span><span class='comma'>,</span> <span class='id identifier rubyid__tag'>_tag</span><span class='comma'>,</span> <span class='id identifier rubyid__plain'>_plain</span><span class='comma'>,</span> <span class='id identifier rubyid__quoted'>_quoted</span><span class='comma'>,</span> <span class='id identifier rubyid__style'>_style</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_anchor'>record_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_anchor'>anchor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_mapping-instance_method">
+  
+    #<strong>start_mapping</strong>(anchor, _tag, _implicit, _style)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_mapping'>start_mapping</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='comma'>,</span> <span class='id identifier rubyid__tag'>_tag</span><span class='comma'>,</span> <span class='id identifier rubyid__implicit'>_implicit</span><span class='comma'>,</span> <span class='id identifier rubyid__style'>_style</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_anchor'>record_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_anchor'>anchor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_sequence-instance_method">
+  
+    #<strong>start_sequence</strong>(anchor, _tag, _implicit, _style)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_sequence'>start_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='comma'>,</span> <span class='id identifier rubyid__tag'>_tag</span><span class='comma'>,</span> <span class='id identifier rubyid__implicit'>_implicit</span><span class='comma'>,</span> <span class='id identifier rubyid__style'>_style</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_anchor'>record_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_anchor'>anchor</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_anchor'>anchor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="undeclared_aliases-instance_method">
+  
+    #<strong>undeclared_aliases</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_undeclared_aliases'>undeclared_aliases</span>
+  <span class='ivar'>@aliases</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='ivar'>@anchors</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unused_anchors-instance_method">
+  
+    #<strong>unused_anchors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/yamlint/rules/anchors.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unused_anchors'>unused_anchors</span>
+  <span class='id identifier rubyid_used_names'>used_names</span> <span class='op'>=</span> <span class='ivar'>@aliases</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@anchors</span><span class='period'>.</span><span class='id identifier rubyid_except'>except</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_used_names'>used_names</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='op'>|</span>
+    <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span> <span class='op'>:</span> <span class='id identifier rubyid_info'>info</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Jan 25 08:00:08 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-4.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

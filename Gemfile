@@ -6,6 +6,8 @@ gemspec
 
 gem 'rake'
 gem 'rspec'
+gem 'yard'
+gem 'rdoc'
 gem 'rubocop'
 gem 'rubocop-performance'
 gem 'rubocop-rake'
